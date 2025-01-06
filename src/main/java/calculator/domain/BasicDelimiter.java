@@ -1,13 +1,20 @@
 package calculator.domain;
 
+import java.util.Arrays;
+
 public enum BasicDelimiter {
-    COMMA(","),
-    COLON(":"),
+    COMMA(','),
+    COLON(':'),
     ;
 
-    private String basicDelimiter;
+    private Character basicDelimiter;
 
-    private BasicDelimiter(String basicDelimiter) {
+    private BasicDelimiter(Character basicDelimiter) {
         this.basicDelimiter = basicDelimiter;
+    }
+
+    public static boolean isBasicDelimiter(Character input) {
+        return Arrays.stream(BasicDelimiter.values())
+                .anyMatch(delimiter -> delimiter.basicDelimiter.equals(input));
     }
 }
