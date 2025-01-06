@@ -1,5 +1,6 @@
 package calculator.domain;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -13,6 +14,10 @@ public class CustomDelimiters {
 
     public static CustomDelimiters create() {
         return new CustomDelimiters(new HashSet<>());
+    }
+
+    public Set<CustomDelimiter> getCustomDelimiters() {
+        return Collections.unmodifiableSet(customDelimiters);
     }
 
     public void register(Character input) {

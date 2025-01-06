@@ -13,7 +13,7 @@ class BasicDelimiterTest {
     @DisplayName("기본 구분자인 경우 true를 반환한다.")
     void should_ReturnTrue_When_InputIsBasicDelimiter(char input) {
         //when
-        boolean result = BasicDelimiter.isBasicDelimiter(input);
+        boolean result = BasicDelimiters.isBasicDelimiter(input);
 
         //then
         Assertions.assertThat(result).isTrue();
@@ -24,7 +24,7 @@ class BasicDelimiterTest {
     @DisplayName("기본 구분자가 아닌 경우 false를 반환한다.")
     void should_ReturnFalse_When_InputIsNotBasicDelimiter(char input) {
         // when
-        boolean result = BasicDelimiter.isBasicDelimiter(input);
+        boolean result = BasicDelimiters.isBasicDelimiter(input);
 
         // then
         Assertions.assertThat(result).isFalse();

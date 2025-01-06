@@ -2,7 +2,7 @@ package calculator.domain;
 
 import java.util.Objects;
 
-import static calculator.domain.BasicDelimiter.isBasicDelimiter;
+import static calculator.domain.BasicDelimiters.isBasicDelimiter;
 
 public class CustomDelimiter {
 
